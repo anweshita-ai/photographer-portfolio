@@ -15,7 +15,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // -------------------- Modal Logic: Open, Navigate, Close --------------------
 let currentImageIndex = 0;
-const images = ['portrait.jpg', 'lanscape.jpg', 'wedding.jpg', 'travel.jpg'];
+const images = [
+  'images/portrait.jpg',
+  'images/landscape.jpg',
+  'images/wedding.jpg',
+  'images/travel.jpg'
+];
 
 function openModal(src) {
   currentImageIndex = images.indexOf(src);
