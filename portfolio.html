@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Reuse the same navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><em>Glimmer & Gaze</em></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="reveal">My Work</h1>
+    <div class="categories reveal">
+      <button class="filter-btn" data-category="portrait">Portrait</button>
+      <button class="filter-btn" data-category="landscape">Landscape</button>
+      <button class="filter-btn" data-category="wedding">Wedding</button>
+      <button class="filter-btn" data-category="travel">Travel</button>
+    </div>
+
+    <section class="gallery reveal">
+      <div class="photo portrait reveal" onclick="openModal('portrait.jpg')">
+        <img src="portrait.jpg" alt="Portrait">
+        <p>Portrait Session</p>
+      </div>
+      <div class="photo landscape reveal" onclick="openModal('lanscape.jpg')">
+        <img src="lanscape.jpg" alt="Landscape">
+        <p>Mountain View</p>
+      </div>
+      <div class="photo wedding reveal" onclick="openModal('wedding.jpg')">
+        <img src="wedding.jpg" alt="Wedding">
+        <p>Wedding Moments</p>
+      </div>
+      <div class="photo travel reveal" onclick="openModal('travel.jpg')">
+        <img src="travel.jpg" alt="Travel">
+        <p>Travel Diaries</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for enlarged image view -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true">
+    <span class="close"  aria-label="Close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div class="modal-navigation">
+      <button class="prev" onclick="changeImage('prev')">&#10094;</button>
+      <button class="next" onclick="changeImage('next')">&#10095;</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Glimmer&Gaze | Email: g&g@clicks.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
